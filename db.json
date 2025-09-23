@@ -1,0 +1,88 @@
+{
+  "stats": {
+    "totalAnimals": 42,
+    "enclosures": 8,
+    "feedingTasks": 5,
+    "alerts": 2
+  },
+  "feedingSchedule": [
+    {
+      "id": 1,
+      "animal": "Lion",
+      "time": "2025-09-22T09:00:00",
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "animal": "Elephant",
+      "time": "2025-09-22T10:30:00",
+      "status": "completed"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Sarah Jenkins",
+      "role": "Zookeeper",
+      "shift": "Morning",
+      "tasks": ["Feed lions", "Clean enclosures"]
+    },
+    {
+      "id": 2,
+      "name": "Tom Alvarez",
+      "role": "Veterinarian",
+      "shift": "Afternoon",
+      "tasks": ["Check elephant health", "Review alerts"]
+    }
+  ],
+  "enclosures": [
+    {
+      "id": 1,
+      "name": "Savannah Zone",
+      "type": "Open",
+      "animals": ["Lion", "Zebra"],
+      "cleanliness": "Good"
+    },
+    {
+      "id": 2,
+      "name": "Rainforest Habitat",
+      "type": "Closed",
+      "animals": ["Monkey", "Parrot"],
+      "cleanliness": "Needs Cleaning"
+    }
+  ],
+  "animals": [
+    {
+      "id": 1,
+      "name": "Leo",
+      "species": "Lion",
+      "age": 5,
+      "health": "Healthy",
+      "enclosureId": 1
+    },
+    {
+      "id": 2,
+      "name": "Ella",
+      "species": "Elephant",
+      "age": 12,
+      "health": "Under Observation",
+      "enclosureId": 3
+    }
+  ],
+  "alerts": [
+    {
+      "id": 1,
+      "type": "Health",
+      "message": "Ella the Elephant needs a follow-up check",
+      "severity": "High",
+      "timestamp": "2025-09-21T15:00:00"
+    },
+    {
+      "id": 2,
+      "type": "Maintenance",
+      "message": "Rainforest Habitat needs cleaning",
+      "severity": "Medium",
+      "timestamp": "2025-09-21T12:00:00"
+    }
+  ]
+}
