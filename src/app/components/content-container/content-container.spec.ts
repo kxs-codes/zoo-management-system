@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaskBar } from './task-bar';
+import { ContentContainer } from './content-container';
 
-describe('TaskBar', () => {
-  let component: TaskBar;
-  let fixture: ComponentFixture<TaskBar>;
+describe('ContentContainer', () => {
+  let component: ContentContainer;
+  let fixture: ComponentFixture<ContentContainer>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TaskBar]
+      imports: [ContentContainer]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TaskBar);
+    fixture = TestBed.createComponent(ContentContainer);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
