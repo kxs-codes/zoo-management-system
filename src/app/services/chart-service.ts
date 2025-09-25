@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; // Need to learn
 import { Observable } from 'rxjs'; // Need to learn
+import { Animal } from '../models/animal';
 
 @Injectable({
   providedIn: 'any'
@@ -8,9 +9,11 @@ import { Observable } from 'rxjs'; // Need to learn
 export class ChartService {
   constructor(private http:HttpClient){}
 
-  getChartData(): Observable<{totalAnimals: number; enclosures:number; feedingTasks:number; alerts:number;}> {
-    return this.http.get<{totalAnimals: number; enclosures:number; feedingTasks:number; alerts:number;}>('http://localhost:3000/stats')
-  };
+  animal: Animal | undefined
+
+  getAnimalData(): Observable<Animal> {
+    return this.http.get<Animal>('http://localhost:3000/animals')
+  }
 
   getFeedingSchedule(): Observable<{id:number; animal:string; time:string; status:string}> {
     return this.http.get<{id:number; animal:string; time:string; status:string}>('http://localhost:300/feedingSchedule')

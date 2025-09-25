@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef, inject } from '@angular/core';
 import { ChartService } from '../../services/chart-service';
+import { ZOO_STATS_CHART_CONFIG } from '../../config/chart.config';
 import Chart from 'chart.js/auto';
 
 @Component({
@@ -26,38 +27,10 @@ export class StatsCards  {
       return;
     }
 
-    this.chartService.getChartData().subscribe(data => {
+    this.chartService.getAnimalData().subscribe(data => {
 
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Zoo Stats'] ,
-        datasets: [
-          {
-            label: 'Total Animals',
-            data: [data.totalAnimals],            
-          },
-          {
-            label: '# of Enclosures',
-            data: [data.enclosures],
-          },
-          {
-            label: '# of Feeding Task',
-            data: [data.feedingTasks],
-          },
-          {
-            label: 'Alert Count',
-            data: [data.alerts],
-          }
-      ]},
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-          },
-        },
-      },
-    });
+      const config = ZOO_STATS_CHART_CONFIG(data);
+      this.chart = new Chart(ctx, config);
 
      }); 
   }
