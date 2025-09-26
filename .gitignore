@@ -45,3 +45,4 @@ application.yml
 application-*.yml
 application-*.properties
 client/.angular/**
+zms/target/*
