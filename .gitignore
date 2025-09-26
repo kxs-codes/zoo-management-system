@@ -1,98 +1,47 @@
-# Enviorment Variable(s)
+# Environment
 .env
+.env.*
 
-# Angular specific
-/dist/
-/out-tsc/
-/tmp/
-/coverage/
-/e2e/test-output/
+# Node / package manager
+node_modules/
+package-lock.json
+yarn.lock
+
+# Angular / build outputs
+dist/
+out-tsc/
+build/
 /.angular/
-.angular/
-
-# Node modules and dependency files
-/node_modules/
-/package-lock.json
-/yarn.lock
-
-# Environment files
-/.env
-
-# Angular CLI and build artefacts
-/.angular-cli.json
-/.ng/
-
-# TypeScript cache
 *.tsbuildinfo
 
-# Logs
+# Logs, coverage, caches
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.log
+coverage/
+.nyc_output/
+.cache/
 
-# Spring Boot specific
-/target/
-/*.iml
-/.classpath
-/.project
-/.settings/
-/*.log
-
-# Maven
-/mvnw
-/mvnw.cmd
-/.mvn/
-
-# Gradle
-/gradle/
-/build/
-/.gradle/
-/gradlew
-/gradlew.bat
-
-# IDE files
-/.idea/
-/*.ipr
-/*.iws
-
-# Spring Boot environment files
-/application.properties
-/application.yml
-/application-*.yml
-**/application-*.properties
-
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+# IDEs & editors
 .vscode/
+.idea/
+*.iml
 
-**/node_modules/*
+# OS files
+.DS_Store
+Thumbs.db
+
+# Misc common ignores
+.sass-cache/
+.parcel-cache/
+.turbo/
+.next/
+.nuxt/
+
+# Spring / backend config (local secrets)
+application.properties
+application.yml
+application-*.yml
+application-*.properties
+client/.angular/**
